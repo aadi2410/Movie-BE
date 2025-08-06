@@ -49,7 +49,7 @@ app.use('*', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(process.env.PORT||PORT, '0.0.0.0', () => {
   console.log(`Movie Backend API is running on http://0.0.0.0:${PORT}`);
   console.log(`Health check: http://0.0.0.0:${PORT}/api/health`);
 });
